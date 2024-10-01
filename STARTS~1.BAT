@@ -1,0 +1,1 @@
+ttyd.win32.exe -p 5464 -c username:password -m 4 ".\NTCHAN.CMD"
