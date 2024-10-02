@@ -12,7 +12,7 @@ REM     M œc Ü ƒ~ T
 REM
 REM From Saga, with Love.
 
-REM You are running NT Channel Version 0.1.0
+REM You are running NT Channel Version 0.2.0
 
 :LOADR
 IF NOT EXIST ".\LOG.TXT" ECHO.>".\LOG.TXT"
@@ -48,6 +48,8 @@ GOTO :CHAN
 :CHAN_FORM
 SETLOCAL EnableDelayedExpansion
 SET /P "POST=.  Comment: "
-ECHO   ^<%ANON%^> !POST!>>".\LOG.TXT"
+IF "!POST:~0,1!"==">" (
+	ECHO   ^<%ANON%^> [92m!POST![0m>>".\LOG.TXT"
+) ELSE ECHO   ^<%ANON%^> !POST!>>".\LOG.TXT"
 ENDLOCAL
 GOTO :CHAN
