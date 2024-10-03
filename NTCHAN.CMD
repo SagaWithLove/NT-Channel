@@ -12,16 +12,16 @@ REM     M œc Ü ƒ~ T
 REM
 REM From Saga, with Love.
 
-REM You are running NT Channel Version 0.2.0
+REM You are running NT Channel Version 0.2.1
 
 :LOADR
-IF NOT EXIST ".\LOG.TXT" ECHO.>".\LOG.TXT"
+IF NOT EXIST ".\LOG.TXT" >".\LOG.TXT" ECHO.
 IF NOT EXIST ".\NTCHAN.INI" (
-	ECHO SITE=NT Channel>".\NTCHAN.INI"
-	ECHO MOTD=>>".\NTCHAN.INI"
-	ECHO ANON=Anonymous>>".\NTCHAN.INI"
-	ECHO LOAD=15>>".\NTCHAN.INI"
-	ECHO COOL=60>>".\NTCHAN.INI"
+	>".\NTCHAN.INI" ECHO SITE=NT Channel
+	>>".\NTCHAN.INI" ECHO MOTD=
+	>>".\NTCHAN.INI" ECHO ANON=Anonymous
+	>>".\NTCHAN.INI" ECHO LOAD=5
+	>>".\NTCHAN.INI" ECHO COOL=60
 )
 IF EXIST ".\NTCHAN.INI" (
 	SET /P SITE=
@@ -41,15 +41,15 @@ CLS
 ECHO.
 ECHO   Welcome to %SITE%! %MOTD%
 TYPE ".\LOG.TXT"
-CHOICE /C X± /T %LOAD% /D ±>NUL
-IF %ERRORLEVEL% EQU 1 GOTO :CHAN_FORM
+CHOICE /C ±X /T %LOAD% /D ±>NUL
+IF %ERRORLEVEL% GEQ 2 GOTO :CHAN_FORM
 GOTO :CHAN
 
 :CHAN_FORM
 SETLOCAL EnableDelayedExpansion
 SET /P "POST=.  Comment: "
 IF "!POST:~0,1!"==">" (
-	ECHO   ^<%ANON%^> [92m!POST![0m>>".\LOG.TXT"
-) ELSE ECHO   ^<%ANON%^> !POST!>>".\LOG.TXT"
+	>>".\LOG.TXT" ECHO   ^<%ANON%^> [92m!POST![0m
+) ELSE >>".\LOG.TXT" ECHO   ^<%ANON%^> !POST!
 ENDLOCAL
 GOTO :CHAN
