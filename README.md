@@ -24,7 +24,7 @@ When first launched, a file called `NTCHAN.INI` will be created. This can be use
 | LOAD   | Time in seconds between thread refreshes | 5 |
 | COOL   | Posting cooldown in seconds **(Currently unused)** | 60 |
 
-This file accepts batch command arguments, allowing for extra functionality such as a linebreak in your MOTD using `&ECHO`. This also means that you'll have to escape any special characters. `&` becomes `^&`, `%` becomes `%%`, etc.
+This file accepts batch command arguments, allowing for extra functionality like linebreaks in your MOTD. This also means that you'll have to escape any special characters: `&` becomes `^&`, `%` becomes `%%`, etc.
 ## Operation
 The "X" key can be used to create a post.
 
@@ -44,7 +44,7 @@ NT Channel doesn't require the default credentials to be changed because most NT
 ### Run NT Channel from a user account with restricted permissions
 To touch again on the [worst case scenario](#run-nt-channel-in-a-virtualized-environment), you should consider creating a user account made specifically to host NT Channel, one given the **absolute** ***minimum*** permissions required. An account like this should only need write access to the directory you've placed `NTCHAN.CMD` in, and in some cases `%TEMP%`.
 ### Keep an eye on the file size of your LOG.TXT
-`LOG.TXT` can grow faster than you think, especially if you have a troll bent on trying to bloat the file size. While drive capacity is something of a concern, you should consider the actual network traffic an artificially large `LOG.TXT` might incur. If you let your log grow out of control, you could subtley bring a DOS attack on yourself.
+`LOG.TXT` can grow faster than you think, especially if you have a troll bent on trying to bloat the file size. While drive capacity is something of a concern, you should consider the actual network traffic an artificially large `LOG.TXT` might incur. If you let your log grow out of control, you could subtley bring a DoS attack on yourself.
 ### Disable tab-completion in CMD
 On most systems, the default setting is for the tab button to auto-complete directory names in CMD. Chaining tab presses when creating a post could allow anyone to get an eventual readout of every directory and file name on your device. 
 
