@@ -12,7 +12,7 @@ REM     M œc Ü ƒ~ T
 REM
 REM From Saga, with Love.
 
-REM You are running NT Channel Version 0.2.1
+REM You are running NT Channel Version 0.2.2
 
 :LOADR
 IF NOT EXIST ".\LOG.TXT" >".\LOG.TXT" ECHO.
@@ -33,8 +33,13 @@ IF EXIST ".\NTCHAN.INI" (
 SET "%SITE%"
 SET "%MOTD%"
 SET "%ANON%"
-SET "%LOAD%"
-SET "%COOL%"
+2>NUL SET /A "%LOAD%"
+IF %ERRORLEVEL% GTR 0 SET /A LOAD=5
+IF %LOAD% LSS 0 SET /A LOAD=1
+IF %LOAD% GTR 9999 SET /A LOAD=9999
+2>NUL SET /A "%COOL%"
+IF %ERRORLEVEL% GTR 0 SET /A COOL=60
+IF %COOL% LSS 0 SET /A COOL=0
 
 :CHAN
 CLS
