@@ -4,9 +4,9 @@ Due to the new F2A requirements on GitHub, I will no longer be capable of pushin
 
 For the foreseeable future, NT Channel will be moved to [a page on Neocities](https://invinciblespeed.neocities.org/) to live among a collection of other batch projects. I am still researching direct GitHub alternatives for people who prefer such a method of distribution.
 
-A thanks to the site owner for providing a place to operate! Although I'm sure I would have made my own page eventually, it has proven far quicker and easier to mooch off the work of a more experienced web developer.
+A thanks to the site owner for providing a place to operate! Although I'm sure I would have made my own page eventually, it has proven far quicker and far easier to mooch off the work of a more experienced web developer.
 
-Oops, I let a quip slip through. It was a lost cause to try and stay stoic the whole time I suppose. I hope you don't think lesser of me due to my hostility, but if you do, just try separating the art from the artist. Then you can still enjoy NT Channel without shame!
+Oops, I let a quip slip through. It was a lost cause to try and stay cordial the whole time, I suppose. I hope you don't think lesser of me due to my hostility, but if you do, just try separating the art from the artist. Then you can still enjoy NT Channel without shame!
 # But what *is* an NT Channel?
 NT Channel is a piece of software made to assist in the creation and customization of chatrooms, forums and imageboards. All in batch, of course. What else were you thinking?
 
